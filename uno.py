@@ -354,7 +354,7 @@ class Player:
                 if self.has_uno(): #Uno
                     test = random.random()
                     #print(f"random num = {test}")
-                    if test < .99:
+                    if test < .1: # 10% sChance for not calling uno
                         print(f"{self.name} forgot to call uno!")
                         game.draw_from_deck(self)
                         game.draw_from_deck(self)
@@ -453,22 +453,6 @@ class User(Player):
             user_selection = None
             
             while looping:
-                #card_prompt()
-
-                # if self.has_uno() and not called_uno:
-                #     uno_input = input(">")
-                #     if uno_input != "u":
-                #         print("You didn't say uno!\n")
-                #         game.draw_from_deck(self)
-                #         print(f"{self.hand[len(self.hand) - 1]} drawn from deck.")
-                #         game.draw_from_deck(self)
-                #         print(f"{self.hand[len(self.hand) - 1]} drawn from deck.\n")
-                #         break
-                #     else: 
-                #         print("\nUno!\n")
-                #         called_uno = True
-                #         card_prompt()
-
                 try:
                     user_selection = int(input(">")) - 1
                     print()
