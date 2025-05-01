@@ -189,7 +189,7 @@ class Game:
             print("Pile empty\n")
 
     def get_start_hand(self):
-        START_NUM_CARDS = 2
+        START_NUM_CARDS = 7
         for player in self.players:
             index = 0
             while index < START_NUM_CARDS: 
